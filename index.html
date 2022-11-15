@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js-handson3 (Iteration Statements)</h1>
+    <fieldset>Find the number of digits
+        Take a number from the user and print the count of digits in that number.</fieldset>
+    <pre>
+        const Find_Digits = (N) => 
+        {
+            let count = 0;
+            while(N){
+              count += 1;
+              N = parseInt(N/10);
+            }
+            return count;
+          };
+    </pre>
+
+    <fieldset>
+        Find the Fives.
+Among all the digits from 0−9, PrepBuddy likes number 5. He has a number and wants you to find out the number of times 5 occurred in the given number.
+    </fieldset>
+    <pre>
+        const Find_Five = (N) => 
+        {
+        let count = 0;
+        while(N){
+            r = N % 10;
+            if(r===5){
+            count += 1;
+            }
+            N = parseInt(N/10);
+        }
+        
+        return count;
+            
+        };
+    </pre>
+    
+    <fieldset>Find Sum
+        You are given an integer 
+        N
+        , and your task is to find the sum of all the even integers starting from 
+        1
+         upto 
+        N
+         (
+        N
+         inclusive).</fieldset>
+    <pre>
+        const findSum = (n) => {
+            let sum = 0;
+            let terms;
+            if(n%2===0){
+              terms = parseInt((n-2)/2)+1;
+              return parseInt((terms*(2*2+(terms-1)*2))/2);
+              
+              
+            }
+            else{
+              terms = parseInt((n-3)/2)+1;
+              return parseInt((terms*(2*2+(terms-1)*2))/2);
+              
+            }
+              
+          };
+    </pre>
+
+    <fieldset>Find the sum of the digits of a given number.
+        Write a program that takes a number from the user and get the sum of the digits present in the number.</fieldset>
+    <pre>
+        
+            const Number_Sum = (N) => 
+            {
+            let sum = 0;
+            while(N){
+                sum += N % 10;
+                N = parseInt(N/10);
+            }
+            return sum;
+                
+            };
+
+
+            
+    </pre>
+
+
+    <fieldset>Print the Odds.
+        Write a program which takes  a number from user and print all odd numbers in between 2 and N, but print 2 first.</fieldset>
+
+    <pre>
+        const Print_Odd = (N) => 
+        {
+        let count = 2;
+        console.log(2);
+        while(count<=N){
+            if(count%2===1){
+            console.log(count);
+            
+            }
+            count += 1;
+        }
+            
+        };
+    </pre>
+
+    <fieldset>Print the Pattern.
+        Write a program which ask user for no of lines and print a pattern using an asterik .</fieldset>
+    <pre>
+        const Print_pattern = (N) => 
+        {
+        for(let i = 1;i<=N;i++){
+            let str = ""
+            for(let j = 1;j<=i;j++){
+            str += "*"
+            
+            
+            }
+            console.log(str);
+        }
+
+        };
+
+    </pre>
+    <fieldset>Check whether a Number is a prime or not.
+        Write a program which takes  a number from user and check whether number is prime number or not a prime number.</fieldset>
+    <pre>
+        const Prime_Check = (N) => 
+        {
+        if(N===1){
+            return "NO";
+        }
+        for(let i=2;i*i<=N;i++){
+            if(N%i===0){
+            return "NO"
+            }
+        
+        }
+        
+        return "YES";
+            
+            
+        };
+    </pre>
+    <fieldset>Print Numbers
+        You are given an integer 
+        N
+        , and your task is to print all the integers starting from 
+        1
+         till 
+        N
+         (
+        N
+         inclusive).</fieldset>
+    <pre>
+        const printNumbers = (n) => {
+            for(let i=1;i<=n;i++){
+              console.log(i);
+              
+            }
+              
+          };
+    </pre>
+    <fieldset>Print the Table
+        Write a program which takes a number from user and print the table.</fieldset>
+    <pre>
+        const Print_Table = (N) => 
+        {
+        for(let i=1;i<=10;i++){
+            console.log(`${N} * ${i} = ${N*i}`);
+            
+        }
+            
+        };
+    </pre>
+</body>
+</html>
